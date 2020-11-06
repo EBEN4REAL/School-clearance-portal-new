@@ -1,0 +1,142 @@
+
+
+
+body {
+    background-color: rgb(242,242, 246 ) !important;
+}
+.logo {
+    margin-top: 70px;
+}
+.groupe__img {
+    margin: 0 auto;
+    width: 90%;
+    
+}
+::placeholder {
+    font-size: 13px;
+    color: lightgray;
+}
+.grouped__img_pic{
+    width: 100%;
+}
+.office_365_img {
+    position: absolute;
+}
+.grey__text {
+    color: rgb(112, 112, 112)
+}
+body {
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.welcome_header {
+    font-size: 23px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 70px;
+}
+.left_wrapper {
+    height: 100vh;
+    background: white;
+}
+.logo__text {
+    color: #9c27b0;
+    font-weight: 700;
+    text-align: center;
+}
+.right_wrapper {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    height: 100vh;
+    background: #7d4088;
+    background-image:linear-gradient(rgb(9, 140, 40 , 0.92), rgb(9, 140, 40, 0.92)), url('assets/img/Group 139.png');
+    background-repeat: 'no-repeat';
+    background-size: 'cover';
+    background-position: '79% 50%';
+}
+.sign_up_btn {
+    background: transparent;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 10px 40px 10px 40px;
+}
+.dcas__para_text {
+    color: white;
+}
+
+.learn__more_welcome_header {
+    margin-top: 20%;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+}
+.banner__content {
+    margin-top: 100px;
+}
+
+.login___section__container {
+    margin: 0 auto;
+    width: 60%;
+}
+.login__input {
+    margin: 0 auto;
+    height: 50px;
+    width: 75%;
+    border: 1px solid #9c27b0;
+    border-radius: 15px;
+    position: relative;
+}
+.input___group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+input {
+    border: none;
+    width: 76%;
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+span {
+    position: absolute;
+    top: -13px;
+    left: 30px;
+    font-weight: 500;
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #9c27b0;
+    font-size: 16px;
+}
+.login__btn {
+    background: #9c27b0;
+    border: 1px solid #9c27b0;
+    border-radius: 30px;
+    border-radius: 21px;
+    font-size: 17px;
+    padding: 10px 45px 10px 45px;
+    color: white;
+    width: 36%;
+    -webkit-box-shadow: 0 2px 3px black;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+select {
+    width: 80%;
+    height: 43px;
+    border: none !important;
+    outline: none;
+}
+/* .right_wrapper {
+    background-image: linear-gradient(rgb(26, 51, 101, 0.88), rgb(26, 51, 101, 0.88)), url("../../assests/img/email_background.jpg");
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    background-position: center top;
+} */
