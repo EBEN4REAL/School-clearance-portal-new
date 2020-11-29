@@ -1,6 +1,6 @@
 <?php
-include_once 'classes/General.php';
-$general = new General();
+include_once 'classes/Clearance.php';
+$general = new Clearance();
 if(isset($_GET['status']) && $_GET['status'] === "delete"){
     if($_GET['status'] === "delete"){
         $deletedept = $general->deleteDepartmentItems($_GET['item_id']);

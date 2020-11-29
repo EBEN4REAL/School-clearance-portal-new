@@ -1,6 +1,6 @@
 <?php
-    include_once 'classes/General.php';
-    $general = new General(); $status_save = "";
+    include_once 'classes/Clearance.php';
+    $general = new Clearance(); $status_save = "";
     $status ="";
     // Get student profile
      if(isset($_GET['matno'])){

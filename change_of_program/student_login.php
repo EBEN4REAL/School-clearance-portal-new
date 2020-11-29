@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new GeneProgramChangeral();
 $status = '';
 if (isset($_POST['login'])) {
       $username = $_POST['username'];

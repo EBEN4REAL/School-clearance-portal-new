@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 ?>
 <?php include("staff_master_layout.php");  ?>
 
@@ -31,7 +31,7 @@ $general = new General();
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
-                <thead>
+              <thead>
                 <tr>
                   <th>Matric Number</th>
                   <th>New Program</th>

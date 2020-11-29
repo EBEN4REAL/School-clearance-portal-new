@@ -1,22 +1,22 @@
 <?php
-    include_once 'classes/General.php';
-    $general = new General();
+    include_once 'classes/Clearance.php';
+    $clearance = new Clearance();
     $status_save = "";
 
 
     $status ="";
     // GET DEPARTMENT TOTAL ITEM
-    $student_cleared = $general->getDepartTotalItems($_SESSION['deptid'],  $_GET['matno']);
+    $student_cleared = $clearance->getDepartTotalItems($_SESSION['deptid'],  $_GET['matno']);
 
      // Get student profile
      if(isset($_GET['matno'])){
-        $getStudentProfile = $general->getAStudentRecord($_GET['matno']);
+        $getStudentProfile = $clearance->getAStudentRecord($_GET['matno']);
         if($getStudentProfile){
         }else {
         }
     }
 
-    $general->getClearanceDepartmentsForm("Academic Department");
+    $clearance->getClearanceDepartmentsForm("Academic Department");
     if(isset($_POST['submit'])){
       
       $acad_req = $_POST['acad_req'];
@@ -25,7 +25,7 @@
       $kickoffid = $getStudentProfile['kickoffid'];
       $reg_no = $_GET['matno'];
 
-      $save_record = $general->addAcademicDepartmentRecords($acad_req, $_SESSION['deptid'], $kickoffid , $reg_no, $aca_req_action);
+      $save_record = $clearance->addAcademicDepartmentRecords($acad_req, $_SESSION['deptid'], $kickoffid , $reg_no, $aca_req_action);
 
       
 
@@ -48,7 +48,7 @@
 
      // Get student profile
      if(isset($_GET['matno'])){
-      $studentProfile = $general->getAcademicStudentProfile($_GET['matno']);
+      $studentProfile = $clearance->getAcademicStudentProfile($_GET['matno']);
       // print_r($getStudentProfile);
       // return;
       if($studentProfile){
@@ -361,7 +361,7 @@
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
         <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+          <h3 class="control-sidebar-heading">clearance Settings</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
@@ -370,7 +370,7 @@
             </label>
 
             <p>
-              Some information about this general settings option
+              Some information about this clearance settings option
             </p>
           </div>
           <!-- /.form-group -->

@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 
 if(!isset($_SESSION['dept'])){
     echo '
@@ -49,7 +49,7 @@ if(!isset($_SESSION['dept'])){
                 <tbody>
                
                 <?php
-                 $general->getProgramChangeRequests(); ?>
+                 $general->getStudentsBeingAccepted(); ?>
                 </tfoot>
               </table>
             </div>

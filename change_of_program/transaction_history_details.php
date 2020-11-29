@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 // session_start();
 $status = "";
  // Get student profile

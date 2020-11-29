@@ -1,6 +1,6 @@
 <?php
-include_once 'classes/General.php';
-$general = new General();
+include_once 'classes/Clearance.php';
+$general = new Clearance();
 $general->getClearanceDepartmentsForm("CLR");
 ?>
 <?php include("includes/master_layout.php");  ?>
@@ -23,8 +23,6 @@ $general->getClearanceDepartmentsForm("CLR");
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-      
-
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">All Clearance Students (CLR)</h3>

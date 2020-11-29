@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 $status = "";
  // Get student profile
  if(isset($_GET['matno'])){
@@ -19,12 +19,12 @@ if(isset($_POST['submit'])){
   
   $save_records = $general->updateVCAction($_GET['matno'], $action);
   if ($save_records) {
-    // header("Refresh:1");
-   echo '
-    <script>
-        window.location = "http://cuclearance.battenshub.com/change_of_program/program_change_request_details.php?matno='.$_GET['matno'].'"
-    </script>
-';
+    header("Refresh:0.01");
+//    echo '
+//     <script>
+//         window.location = "http://cuclearance.battenshub.com/change_of_program/program_change_request_details.php?matno='.$_GET['matno'].'"
+//     </script>
+// ';
 
     $status = '
     <div class="alert alert-success">
@@ -43,10 +43,6 @@ if(isset($_POST['submit'])){
     ' ;
   }
 }
-
-
-
-
 
 ?>
 

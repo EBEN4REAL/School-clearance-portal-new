@@ -81,7 +81,7 @@
               <li><a href="same_dept_students.php"><i class="fa fa-circle-o"></i>Same Under Same Dept</a></li>
             </ul>
           </li>
-          <li class="treeview">
+          <!-- <li class="treeview">
             <a href="#" style="background: #404d9c29;color: black;">
               <i class="fa fa-dashboard"></i> <span>DEAN</span>
               <span class="pull-right-container">
@@ -93,7 +93,7 @@
               <li><a href="students_being_released.php"><i class="fa fa-circle-o"></i>Students Being Released</a></li>
               <li><a href="same_dept_students.php"><i class="fa fa-circle-o"></i>Students Under Same Dept</a></li>
             </ul>
-          </li>
+          </li> -->
           <?php 
             if($_SESSION['dept'] === "VC") {
               echo '

@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 ?>
 <?php include("master_layout.php"); ?>
   <div class="content-wrapper">

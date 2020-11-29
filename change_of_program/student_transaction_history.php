@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 ?>
 <?php include("student_master_layout.php");  ?>
 
@@ -44,7 +44,7 @@ $general = new General();
                 <tbody>
                
                 <?php
-                 $general->getTransactionHistory(); ?>
+                 $general->getTransactionHistory($_SESSION['regno']); ?>
 
                 </tfoot>
               </table>

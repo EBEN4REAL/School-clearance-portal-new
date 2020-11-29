@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 ?>
 <?php include("staff_master_layout.php");  ?>
 
@@ -46,7 +46,7 @@ $general = new General();
                 <tbody>
                
                 <?php
-                 $general->getStudentsBeingAccepted(); ?>
+                 $general->getStudentsBeingReleased(); ?>
                 </tfoot>
               </table>
             </div>

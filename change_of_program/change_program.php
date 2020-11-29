@@ -1,7 +1,8 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 $status = '';
+$student_details = $general->changeOfProgramDetails( $_SESSION['regno']);
 ?>
 <?php include("student_master_layout.php"); ?>
 
@@ -36,12 +37,13 @@ $status = '';
                 </div>
                 <div class="form-group">
                     <label for="">Reg Number</label>
-                    <input type="text" value="<?php echo $_SESSION['regno']; ?>"  class="form-control" placeholder="" name="regno" id="regno">
+                    <input type="text" value="<?php echo $student_details['matno']; ?>"  class="form-control" placeholder="" name="regno" id="regno">
                 </div>
 
                 <div class="form-group">
                     <label for="">Old Level</label>
                     <select class="form-control" name="old_level" id="oldlevel">
+                      <option value="<?php echo $student_details['level']; ?>" selected><?php echo $student_details['level']; ?></option>
                       <option value="100">100</option>
                       <option value="200">200</option>
                       <option value="300">300</option>
@@ -65,6 +67,7 @@ $status = '';
                     <label for="">Old Program</label>
                     <select class="form-control dept" name="old_program" id="oldprogram">
                       <option>Select program</option>
+                      <option value="<?php echo $student_details['program']; ?>" selected><?php echo $student_details['program']; ?></option>
                       <?php echo $general->get_programs(); ?> 
                     </select>
                 </div>
@@ -218,6 +221,7 @@ $status = '';
         cache: false,
         success: function(data) {
           alert(data);
+          window.location.reload()
           }
         });
       }

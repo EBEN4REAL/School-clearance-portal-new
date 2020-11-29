@@ -19,7 +19,6 @@
         if ($login) {
             
             echo "Successful Request";
-          
             
         } else {
             echo "Failed Request, Cannot initiate change of program request more than once";

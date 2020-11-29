@@ -1,6 +1,6 @@
 <?php
-    include_once 'classes/General.php';
-    $general = new General();
+    include_once 'classes/Clearance.php';
+    $general = new Clearance();
     $status_save = ""; $status ="";
     // GET DEPARTMENT TOTAL ITEM
     $student_cleared = $general->getDepartTotalItems($_SESSION['deptid'],  $_GET['matno']);

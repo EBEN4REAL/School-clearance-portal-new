@@ -1,6 +1,6 @@
 <?php
-include '../classes/General.php';
-$general = new General();
+include '../classes/ProgramChange.php';
+$general = new ProgramChange();
 // session_start();
 ?>
 <?php include("staff_master_layout.php");  ?>

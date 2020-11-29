@@ -1,7 +1,7 @@
 
 <?php
-    include_once 'classes/General.php';
-    $general = new General();
+    include_once 'classes/Clearance.php';
+    $general = new Clearance();
 
     session_start();
 
