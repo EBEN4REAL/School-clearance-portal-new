@@ -14,7 +14,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
   <div class="content-wrapper">
     <section class="content-header">
         <label class="mr-5">Select a department to treat</label>
-        <select class="form-control ml-5">
+        <select class="form-control select_dept">
             <option value="CSIS">CSIS</option>
             <option value="Financial Services">Financial Services</option>
             <option value="CLR">CLR</option>
@@ -171,7 +171,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
         </div>
       </div>
     </section>
-    <section class="content">
+    <section class="content ad">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -200,7 +200,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
         </div>
       </div>
     </section>
-    <section class="content">
+    <section class="content sa">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -229,6 +229,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
         </div>
       </div>
     </section>
+    
     
     <!-- /.content -->
   </div>
@@ -278,6 +279,84 @@ $general->getClearanceDepartmentsForm("Student Affairs");
       "autoWidth": false
     });
   });
+document.querySelector('.csis').style.display = 'block'
+document.querySelector('.fs').style.display = 'none'
+document.querySelector('.clr').style.display = 'none'
+document.querySelector('.reg').style.display = 'none'
+document.querySelector('.fs').style.display = 'none'
+document.querySelector('.hc').style.display = 'none'
+document.querySelector('.ad').style.display = 'none'
+document.querySelector('.sa').style.display = 'none'
+document.querySelector('.select_dept').addEventListener('change' , (e) => {
+    if(e.target.value == 'CSIS') {
+        document.querySelector('.csis').style.display = 'block'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.clr').style.display = 'none'
+        document.querySelector('.reg').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.hc').style.display = 'none'
+        document.querySelector('.ad').style.display = 'none'
+        document.querySelector('.sa').style.display = 'none'
+    }
+    if(e.target.value == 'Financial Services') {
+        document.querySelector('.csis').style.display = 'none'
+        document.querySelector('.fs').style.display = 'block'
+        document.querySelector('.clr').style.display = 'none'
+        document.querySelector('.reg').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.hc').style.display = 'none'
+        document.querySelector('.ad').style.display = 'none'
+        document.querySelector('.sa').style.display = 'none'
+    }
+    if(e.target.value == 'CLR') {
+        document.querySelector('.csis').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.clr').style.display = 'block'
+        document.querySelector('.reg').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.hc').style.display = 'none'
+        document.querySelector('.ad').style.display = 'none'
+        document.querySelector('.sa').style.display = 'none'
+    }
+    if(e.target.value == 'Registry') {
+        document.querySelector('.csis').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.clr').style.display = 'none'
+        document.querySelector('.reg').style.display = 'block'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.hc').style.display = 'none'
+        document.querySelector('.ad').style.display = 'none'
+        document.querySelector('.sa').style.display = 'none'
+    }
+    if(e.target.value == 'Health Center') {
+        document.querySelector('.csis').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.clr').style.display = 'none'
+        document.querySelector('.reg').style.display = 'none'
+        document.querySelector('.hc').style.display = 'block'
+        document.querySelector('.ad').style.display = 'none'
+        document.querySelector('.sa').style.display = 'none'
+    }
+    if(e.target.value == 'Academic Department') {
+        document.querySelector('.csis').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.clr').style.display = 'none'
+        document.querySelector('.reg').style.display = 'none'
+        document.querySelector('.hc').style.display = 'none'
+        document.querySelector('.ad').style.display = 'block'
+        document.querySelector('.sa').style.display = 'none'
+    }
+    if(e.target.value == 'Student Affairs') {
+        document.querySelector('.csis').style.display = 'none'
+        document.querySelector('.fs').style.display = 'none'
+        document.querySelector('.clr').style.display = 'none'
+        document.querySelector('.reg').style.display = 'none'
+        document.querySelector('.hc').style.display = 'none'
+        document.querySelector('.ad').style.display = 'none'
+        document.querySelector('.sa').style.display = 'block'
+    }
+    console.log(e.target.value)
+})
 </script>
 </body>
 </html>
