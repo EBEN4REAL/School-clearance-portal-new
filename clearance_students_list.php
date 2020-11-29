@@ -63,7 +63,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
               <h3 class="box-title">All Clearance Students (FINANCIAL SERVICES)</h3>
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example2" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Reg No</th>
@@ -92,7 +92,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
               <h3 class="box-title">All Clearance Students (CLR)</h3>
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example3" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Reg No</th>
@@ -121,7 +121,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
               <h3 class="box-title">All Clearance Students (REGISTRY)</h3>
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example4" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Reg No</th>
@@ -150,7 +150,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
               <h3 class="box-title">All Clearance Students (Health Center)</h3>
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example5" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Reg No</th>
@@ -179,7 +179,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
               <h3 class="box-title">All Clearance Students (ACADEMIC DEPT.)</h3>
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example6" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Reg No</th>
@@ -208,7 +208,7 @@ $general->getClearanceDepartmentsForm("Student Affairs");
               <h3 class="box-title">All Clearance Students</h3>
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example7" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Reg No</th>
@@ -270,14 +270,12 @@ $general->getClearanceDepartmentsForm("Student Affairs");
 <script>
   $(function () {
     $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
+    $("#example2").DataTable();
+    $("#example3").DataTable();
+    $("#example4").DataTable();
+    $("#example5").DataTable();
+    $("#example6").DataTable();
+    $("#example7").DataTable();
   });
 document.querySelector('.csis').style.display = 'block'
 document.querySelector('.fs').style.display = 'none'
@@ -355,7 +353,6 @@ document.querySelector('.select_dept').addEventListener('change' , (e) => {
         document.querySelector('.ad').style.display = 'none'
         document.querySelector('.sa').style.display = 'block'
     }
-    console.log(e.target.value)
 })
 </script>
 </body>
