@@ -99,7 +99,7 @@
             <a href="clearance_students_list.php" style="background: #404d9c29;color: black;">
               <i class="fa fa-dashboard"></i> <span>Departments Clearance</span>
               <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
+                <!-- <i class="fa fa-angle-left pull-right"></i> -->
               </span>
             </a>
           </li>
@@ -107,7 +107,7 @@
             <a href="http://cuclearance.battenshub.com/" style="background: #404d9c29;color: black;">
               <i class="fa fa-dashboard"></i> <span>Home</span>
               <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
+                <!-- <i class="fa fa-angle-left pull-right"></i> -->
               </span>
             </a>
           </li>
