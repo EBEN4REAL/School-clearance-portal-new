@@ -166,8 +166,16 @@ session_start();
             $stmt = $this->db->prepare($query);
             $stmt->execute();
 
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'Registry'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
+
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';
@@ -418,8 +426,16 @@ session_start();
             $stmt = $this->db->prepare($query);
             $stmt->execute();
 
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'Student Affairs'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
+
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';
@@ -762,8 +778,17 @@ session_start();
             $stmt = $this->db->prepare($query);
             $stmt->execute();
 
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'Health Center'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
+
+
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';
@@ -876,9 +901,16 @@ session_start();
             $query = "SELECT * FROM exitclearanceickoff where regno IN ($mat_nos)";
             $stmt = $this->db->prepare($query);
             $stmt->execute();
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'Financial Services'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';
@@ -1164,12 +1196,20 @@ session_start();
             }
         } 
         public function getKickoffRecordsForAcademicDept(){
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'Academic Department'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
+
             $query = "SELECT * FROM exitclearanceickoff";
             $stmt = $this->db->prepare($query);
             $stmt->execute();
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';
@@ -1212,6 +1252,7 @@ session_start();
             }
         }
         public function getKickoffRecordsFinance(){
+            
 
             $query = "SELECT * FROM exitclearanceickoff";
             $stmt = $this->db->prepare($query);
@@ -1269,12 +1310,20 @@ session_start();
             }
         }
         public function getKickoffRecords(){
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'CSIS'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
+            
             $query = "SELECT * FROM exitclearanceickoff";
             $stmt = $this->db->prepare($query);
             $stmt->execute();
             
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';
@@ -1304,12 +1353,20 @@ session_start();
             
         }
         public function getKickoffRecordsForCLR(){
+            $query_1 = "SELECT * FROM exitclerancedepts where clerance_department = 'CLR'";
+			$stmt_1 = $this->db->prepare($query_1);
+			$stmt_1->execute();
+
+			$row = $stmt_1->fetch(PDO::FETCH_ASSOC);
+
+            $deptid = $row['deptid'];
+
             $query = "SELECT * FROM exitclearanceickoff";
             $stmt = $this->db->prepare($query);
             $stmt->execute();
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $cleared = $this->getDepartTotalItems($_SESSION['deptid'], $row["regno"]);
+                $cleared = $this->getDepartTotalItems($deptid, $row["regno"]);
                 $student_status = '';
                 if($cleared == 'true') {
                     $student_status =  '<span class="badge badge-success badge-pill" style="background: green; font-size: 18px">cleared</span>';

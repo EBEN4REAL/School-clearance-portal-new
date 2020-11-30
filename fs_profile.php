@@ -11,8 +11,10 @@
         }
     }
     // GET DEPARTMENT TOTAL ITEM
-    $student_cleared = $general->getDepartTotalItems($_SESSION['deptid'],  $_GET['matno']);
-    $general->getClearanceDepartmentsForm("Financial Services");
+    $dept__id = $general->getClearanceDepartmentsForm("Financial Services");
+    $student_cleared = $general->getDepartTotalItems($dept__id,  $_GET['matno']);
+
+    
     if(isset($_POST['submit'])){
       
       $ll = $_POST['ll'];

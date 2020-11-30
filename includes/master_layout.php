@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Cu Clearance </title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -77,7 +78,7 @@
               <li><a href="add_clearance_dept_table.php"><i class="fa fa-circle-o"></i>Manage  Departments</a></li>
             </ul>
           </li>
-          <li class="treeview">
+          <!-- <li class="treeview">
             <a href="#" style="background: #404d9c29;color: black;">
               <i class="fa fa-dashboard"></i> <span>Departments</span>
               <span class="pull-right-container">
@@ -93,6 +94,14 @@
               <li><a href="acad_dept.php"><i class="fa fa-circle-o"></i>Academic Department</a></li>
               <li><a href="sa.php"><i class="fa fa-circle-o"></i>Student Affairs</a></li>
             </ul>
+          </li> -->
+          <li class="">
+            <a href="clearance_students_list.php" style="background: #404d9c29;color: black;">
+              <i class="fa fa-dashboard"></i> <span>Departments Clearance</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
           </li>
            <li class="">
             <a href="http://cuclearance.battenshub.com/" style="background: #404d9c29;color: black;">

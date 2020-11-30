@@ -11,8 +11,8 @@ $general->getClearanceDepartmentsForm("Student Affairs");
 ?>
 <?php include("includes/master_layout.php");  ?>
 
-  <div class="content-wrapper">
-    <section class="content-header">
+  <div class="content-wrapper" id="app">
+    <section class="content-header" >
         <label class="mr-5">Select a department to treat</label>
         <select class="form-control select_dept">
             <option value="CSIS">CSIS</option>
@@ -26,203 +26,34 @@ $general->getClearanceDepartmentsForm("Student Affairs");
     </section>
 
     <!-- Main content -->
-    <section class="content csis" >
+    <section class="content" >
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">All Clearance Students (CSIS)</h3>
+              <h3 class="box-title">All Clearance Students For <span class="dept_text">CSIS<span> </h3>
             </div>
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-              
-                <?php $general->getKickoffRecords(); ?>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-     <section class="content fs">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">All Clearance Students (FINANCIAL SERVICES)</h3>
-            </div>
-            <div class="box-body">
-              <table id="example2" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-      
-                <?php $general->getFinancialServiceStudents(); ?>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <section class="content clr">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">All Clearance Students (CLR)</h3>
-            </div>
-            <div class="box-body">
-              <table id="example3" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-              
-                <?php $general->getKickoffRecordsForCLR(); ?>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <section class="content reg">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">All Clearance Students (REGISTRY)</h3>
-            </div>
-            <div class="box-body">
-              <table id="example4" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-      
-                <?php $general->getRegistryStudents(); ?>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <section class="content hc">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">All Clearance Students (Health Center)</h3>
-            </div>
-            <div class="box-body">
-              <table id="example5" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-              
-                <?php $general->getKickoffDetailsForHealthCenter(); ?>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <section class="content ad">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">All Clearance Students (ACADEMIC DEPT.)</h3>
-            </div>
-            <div class="box-body">
-              <table id="example6" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-              
-                <?php $general->getKickoffRecordsForAcademicDept(); ?>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <section class="content sa">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">All Clearance Students</h3>
-            </div>
-            <div class="box-body">
-              <table id="example7" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Reg No</th>
-                  <th>Clearance Reason</th>
-                  <th>Semester Id</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-              
-                <?php $general->getKickoffForStudentAffairsDept(); ?>
-                </tfoot>
-              </table>
+            <div class="box-body" >
+              <div id="dept_list_wrapper" >
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                    <th>Reg No</th>
+                    <th>Clearance Reason</th>
+                    <th>Semester Id</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <div >
+                            <?php 
+                                $general->getKickoffRecords(); 
+                            ?>
+                        </div>
+                    </tfoot>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -270,90 +101,147 @@ $general->getClearanceDepartmentsForm("Student Affairs");
 <script>
   $(function () {
     $("#example1").DataTable();
-    $("#example2").DataTable();
-    $("#example3").DataTable();
-    $("#example4").DataTable();
-    $("#example5").DataTable();
-    $("#example6").DataTable();
-    $("#example7").DataTable();
   });
-document.querySelector('.csis').style.display = 'block'
-document.querySelector('.fs').style.display = 'none'
-document.querySelector('.clr').style.display = 'none'
-document.querySelector('.reg').style.display = 'none'
-document.querySelector('.fs').style.display = 'none'
-document.querySelector('.hc').style.display = 'none'
-document.querySelector('.ad').style.display = 'none'
-document.querySelector('.sa').style.display = 'none'
-document.querySelector('.select_dept').addEventListener('change' , (e) => {
+
+
+document.querySelector('.select_dept').addEventListener('change', (e) => {
+    document.querySelector('.dept_text').textContent = e.target.value
     if(e.target.value == 'CSIS') {
-        document.querySelector('.csis').style.display = 'block'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.clr').style.display = 'none'
-        document.querySelector('.reg').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.hc').style.display = 'none'
-        document.querySelector('.ad').style.display = 'none'
-        document.querySelector('.sa').style.display = 'none'
+        document.getElementById("dept_list_wrapper").innerHTML = `<table id="example1" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+            <th>Reg No</th>
+            <th>Clearance Reason</th>
+            <th>Semester Id</th>
+            <th>Status</th>
+            <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <div class="dept_list_wrapper">
+                    <?php 
+                        $general->getKickoffRecords(); 
+                    ?>
+                </div>
+            </tfoot>
+        </table>
+        `
+    }else if(e.target.value == 'Financial Services') {
+        console.log(document.getElementById("dept_list_wrapper"))
+        document.getElementById("dept_list_wrapper").innerHTML = `<table id="example1" class="table table-bordered table-striped"><thead><tr><th>Reg No</th><th>Clearance Reason</th><th>Semester Id</th><th>Status</th><th>Action</th></tr></thead><tbody><div class="dept_list_wrapper"><?php $general->getFinancialServiceStudents() ?></div></tfoot> </table>
+        `
     }
-    if(e.target.value == 'Financial Services') {
-        document.querySelector('.csis').style.display = 'none'
-        document.querySelector('.fs').style.display = 'block'
-        document.querySelector('.clr').style.display = 'none'
-        document.querySelector('.reg').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.hc').style.display = 'none'
-        document.querySelector('.ad').style.display = 'none'
-        document.querySelector('.sa').style.display = 'none'
+    else if(e.target.value == 'CLR') {
+        document.getElementById("dept_list_wrapper").innerHTML = `
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th>Reg No</th>
+                <th>Clearance Reason</th>
+                <th>Semester Id</th>
+                <th>Status</th>
+                <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <div class="dept_list_wrapper">
+                        <?php $general->getKickoffRecordsForCLR() ?>
+                    </div>
+                </tfoot>
+            </table>
+        `
+    }else if(e.target.value == 'Registry') {
+        document.getElementById("dept_list_wrapper").innerHTML = `
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th>Reg No</th>
+                <th>Clearance Reason</th>
+                <th>Semester Id</th>
+                <th>Status</th>
+                <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <div class="dept_list_wrapper">
+                        <?php $general->getRegistryStudents() ?>
+                    </div>
+                </tfoot>
+            </table>
+        `
     }
-    if(e.target.value == 'CLR') {
-        document.querySelector('.csis').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.clr').style.display = 'block'
-        document.querySelector('.reg').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.hc').style.display = 'none'
-        document.querySelector('.ad').style.display = 'none'
-        document.querySelector('.sa').style.display = 'none'
+    else if(e.target.value == 'Health Center') {
+        document.getElementById("dept_list_wrapper").innerHTML = `
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th>Reg No</th>
+                <th>Clearance Reason</th>
+                <th>Semester Id</th>
+                <th>Status</th>
+                <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <div class="dept_list_wrapper">
+                        <?php $general->getKickoffDetailsForHealthCenter() ?>
+                    </div>
+                </tfoot>
+            </table>
+        `
+    }else if(e.target.value == 'Academic Department') {
+        document.getElementById("dept_list_wrapper").innerHTML = `
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th>Reg No</th>
+                <th>Clearance Reason</th>
+                <th>Semester Id</th>
+                <th>Status</th>
+                <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <div class="dept_list_wrapper">
+                    <?php $general->getKickoffRecordsForAcademicDept() ?>
+                    </div>
+                </tfoot>
+            </table>
+            
+        `
     }
-    if(e.target.value == 'Registry') {
-        document.querySelector('.csis').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.clr').style.display = 'none'
-        document.querySelector('.reg').style.display = 'block'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.hc').style.display = 'none'
-        document.querySelector('.ad').style.display = 'none'
-        document.querySelector('.sa').style.display = 'none'
+    else if(e.target.value == 'Student Affairs') {
+        document.getElementById("dept_list_wrapper").innerHTML = `
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th>Reg No</th>
+                <th>Clearance Reason</th>
+                <th>Semester Id</th>
+                <th>Status</th>
+                <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <div class="dept_list_wrapper">
+                        <?php $general->getKickoffForStudentAffairsDept() ?>
+                    </div>
+                </tfoot>
+            </table>
+            
+        `
     }
-    if(e.target.value == 'Health Center') {
-        document.querySelector('.csis').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.clr').style.display = 'none'
-        document.querySelector('.reg').style.display = 'none'
-        document.querySelector('.hc').style.display = 'block'
-        document.querySelector('.ad').style.display = 'none'
-        document.querySelector('.sa').style.display = 'none'
-    }
-    if(e.target.value == 'Academic Department') {
-        document.querySelector('.csis').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.clr').style.display = 'none'
-        document.querySelector('.reg').style.display = 'none'
-        document.querySelector('.hc').style.display = 'none'
-        document.querySelector('.ad').style.display = 'block'
-        document.querySelector('.sa').style.display = 'none'
-    }
-    if(e.target.value == 'Student Affairs') {
-        document.querySelector('.csis').style.display = 'none'
-        document.querySelector('.fs').style.display = 'none'
-        document.querySelector('.clr').style.display = 'none'
-        document.querySelector('.reg').style.display = 'none'
-        document.querySelector('.hc').style.display = 'none'
-        document.querySelector('.ad').style.display = 'none'
-        document.querySelector('.sa').style.display = 'block'
-    }
+            
 })
-</script>
+
+
+ </script>
+
+
 </body>
 </html>
+
+
+
+
+
